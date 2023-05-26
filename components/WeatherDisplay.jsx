@@ -69,7 +69,7 @@ const WeatherDisplay = ({ data ,error}) => {
         <div className='text-white text-justify'>
           <h6 className='text-small second:text-xl text-[#9bb437]'>{formattedDateTime}</h6>
           <h2 className='text-medium  font-bold second:text-3xl third:text-4xl'>{data.name}, {data.sys.country}</h2>
-          <div className='text-large font-semibold flex items-center second:text-4xl third:text-5xl'>  {data.main.temp}°C    <img src={`/src/assets/${icon(data.weather[0].id)}.png`} alt='weather icon'/> </div>
+          <div className='text-large font-semibold flex items-center second:text-4xl third:text-5xl'>  {data.main.temp}°C    <img className="text-xs" src={`/src/assets/${icon(data.weather[0].id)}.png`} alt='weather icon'/> </div>
           <p className='font-bold second:text-xl third:text-2xl'>Feels Like: {data.main.feels_like}°C.      {data.weather[0].description}</p>
           <p className='text-small2 second:text-xl third:text-2xl'>Humidity: {data.main.humidity}%      |    wind speed: {data.wind.speed} m/s</p>
           <p className='text-small2 second:text-xl third:text-2xl'>visibility: {data.visibility} m</p>
